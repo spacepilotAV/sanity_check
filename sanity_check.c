@@ -21,9 +21,9 @@ int check_modulo() {
   for (int j = 0; j < 1048576; j++) {
     i += j;
     i *= j;
-    i %= j;
+    i %= 256;
   }
-  if (i != 'w')
+  if (i != -137)
     INSANE = FAIL_MODULO;
   return INSANE;
 }
