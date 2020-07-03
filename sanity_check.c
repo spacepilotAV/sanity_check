@@ -10,10 +10,10 @@ int FAIL_WTFCHAR5 = 7;
 
 int check_overflow() {
   char buf[1];
-  buf[2] = 0x41;
+/*  buf[2] = 0x41;
   if (buf[2] != 0x41)
     SANITY = FAIL_OVERFLOW;
-  return INSANE;
+*/  return INSANE;
 }
 
 int check_modulo() {
