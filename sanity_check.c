@@ -13,7 +13,7 @@ int check_overflow() {
   buf[2] = 0x41;
   if (buf[2] != 0x41)
     SANITY = FAIL_OVERFLOW;
-  return SANITY;
+  return INSANE;
 }
 
 int check_modulo() {
@@ -24,25 +24,25 @@ int check_modulo() {
     i %= j;
   }
   if (i != 'w')
-    SANITY = FAIL_MODULO;
-  return SANITY;
+    INSANE = FAIL_MODULO;
+  return INSANE;
 }
 
 int check_char() {
   if ('a' != 'a')
-    SANITY=FAIL_WTFCHAR;
+    INSANE=FAIL_WTFCHAR;
   char a = 'a';
   if (a != 'a')
-    SANITY=FAIL_WTFCHAR2;
+    INSANE=FAIL_WTFCHAR2;
   if (a != a)
-    SANITY=FAIL_WTFCHAR3;
+    INSANE=FAIL_WTFCHAR3;
   char b = 'a';
   char c = 'b';
   if (a != b)
-    SANITY=FAIL_WTFCHAR4;
+    INSANE=FAIL_WTFCHAR4;
   if (a == c)
-    SANITY=FAIL_WTFCHAR5;
-  return SANITY;
+    INSANE=FAIL_WTFCHAR5;
+  return INSANE;
 }
 
 int sanity() {
